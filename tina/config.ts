@@ -4,15 +4,11 @@ import {
   UsernamePasswordAuthJSProvider,
 } from "tinacms-authjs/dist/tinacms";
 
-const isLocal = process.env.TINA_PUBLIC_IS_LOCAL === "true";
-
 export default defineConfig({
   branch: "main",
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
   token: process.env.TINA_TOKEN,
-  authProvider: isLocal
-    ? new LocalAuthProvider()
-    : new UsernamePasswordAuthJSProvider(),
+  authProvider: new LocalAuthProvider(),
   build: {
     publicFolder: "public",
     outputFolder: "admin",
