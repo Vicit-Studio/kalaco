@@ -1,0 +1,1 @@
+export { useTinaData } from "./useTinaData";

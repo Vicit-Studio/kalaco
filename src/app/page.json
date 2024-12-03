@@ -1,0 +1,17 @@
+{
+  "hero": [
+    {
+      "h1": "Marketing Digital focado em seus resultados !",
+      "h4": "Cresça de forma inteligente com estratégias que combinam anúncios pagos e decisões guiadas por dados. Aumente sua presença, escale suas vendas e veja resultados reais.",
+      "image": "/assets/brand/iconografia-dark.svg",
+      "_template": "hero"
+    }
+  ],
+  "problem": [
+    {
+      "h2": "Chega de processos ineficientes e resultados inconsistentes. ",
+      "p": "Transforme o marketing do seu negócio com soluções inteligentes que eliminam o retrabalho, potencializam suas vendas e automatizam sua comunicação. dados, performance e crescimento, tudo que você precisa para alcançar seus resultados.",
+      "_template": "problem"
+    }
+  ]
+}
