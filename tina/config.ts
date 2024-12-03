@@ -1,8 +1,5 @@
 import { defineConfig, LocalAuthProvider } from "tinacms";
-import {
-  TinaUserCollection,
-  UsernamePasswordAuthJSProvider,
-} from "tinacms-authjs/dist/tinacms";
+import { TinaUserCollection } from "tinacms-authjs/dist/tinacms";
 
 export default defineConfig({
   branch: "main",

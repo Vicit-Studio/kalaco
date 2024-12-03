@@ -10,5 +10,6 @@ const handler = TinaNodeBackend({
 });
 
 export default (req: IncomingMessage, res: ServerResponse<IncomingMessage>) => {
+  console.log(req.headers.authorization);
   return handler(req, res);
 };
