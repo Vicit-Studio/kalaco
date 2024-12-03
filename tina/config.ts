@@ -8,8 +8,12 @@ const isLocal = process.env.TINA_PUBLIC_IS_LOCAL === "true";
 
 export default defineConfig({
   branch: "main",
-  clientId: process.env.TINA_CLIENT_ID || "",
-  token: process.env.TINA_TOKEN || "",
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
+  token: process.env.TINA_TOKEN,
+  contentApiUrlOverride: "/api/tina/gql",
+  authProvider: isLocal
+    ? new LocalAuthProvider()
+    : new UsernamePasswordAuthJSProvider(),
   build: {
     publicFolder: "public",
     outputFolder: "admin",
@@ -20,9 +24,6 @@ export default defineConfig({
       publicFolder: "public",
     },
   },
-  authProvider: isLocal
-    ? new LocalAuthProvider()
-    : new UsernamePasswordAuthJSProvider(),
   schema: {
     collections: [
       TinaUserCollection,
