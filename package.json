@@ -9,7 +9,7 @@
   },
   "description": "Página de conversão Kalaço.Jr",
   "scripts": {
-    "dev": "tinacms dev -c \"next dev\"",
+    "dev": "TINA_PUBLIC_IS_LOCAL=false tinacms dev -c \"next dev\"",
     "build": "tinacms build && next build",
     "start": "next start"
   },

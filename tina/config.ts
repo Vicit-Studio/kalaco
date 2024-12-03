@@ -1,12 +1,23 @@
 import { defineConfig, LocalAuthProvider } from "tinacms";
-import { TinaUserCollection } from "tinacms-authjs/dist/tinacms";
+import {
+  TinaUserCollection,
+  UsernamePasswordAuthJSProvider,
+} from "tinacms-authjs/dist/tinacms";
+
+const branch =
+  process.env.NEXT_PUBLIC_TINA_BRANCH ||
+  process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF ||
+  process.env.HEAD;
+
+const isLocal = process.env.TINA_PUBLIC_IS_LOCAL === "true";
 
 export default defineConfig({
-  branch: "main",
+  branch,
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
   token: process.env.TINA_TOKEN,
-  contentApiUrlOverride: "/graphql ",
-  authProvider: new LocalAuthProvider(),
+  authProvider: isLocal
+    ? new LocalAuthProvider()
+    : new UsernamePasswordAuthJSProvider(),
   build: {
     publicFolder: "public",
     outputFolder: "admin",
