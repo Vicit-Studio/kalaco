@@ -1,3 +1,5 @@
+import { IncomingMessage, ServerResponse } from "http";
+
 import { TinaNodeBackend, LocalBackendAuthProvider } from "@tinacms/datalayer";
 import { TinaCloudBackendAuthProvider } from "@tinacms/auth";
 
@@ -12,6 +14,6 @@ const handler = TinaNodeBackend({
   databaseClient,
 });
 
-export default (req, res) => {
+export default (req: IncomingMessage, res: ServerResponse<IncomingMessage>) => {
   return handler(req, res);
 };
