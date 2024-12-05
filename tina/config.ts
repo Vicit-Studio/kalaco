@@ -5,7 +5,7 @@ export default defineConfig({
   branch: "main",
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
   token: process.env.TINA_TOKEN,
-  authProvider: new LocalAuthProvider(),
+  // authProvider: new LocalAuthProvider(),
   build: {
     publicFolder: "public",
     outputFolder: "admin",
@@ -18,7 +18,7 @@ export default defineConfig({
   },
   schema: {
     collections: [
-      TinaUserCollection,
+      // TinaUserCollection,
       {
         name: "page",
         label: "Seções",
