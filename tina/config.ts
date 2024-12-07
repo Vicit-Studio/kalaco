@@ -50,6 +50,29 @@ export default defineConfig({
                     label: "Botão",
                     type: "string",
                   },
+                  {
+                    name: "bgImg",
+                    label: "Imagem de Fundo",
+                    type: "image",
+                  },
+                  {
+                    name: "logosClients",
+                    label: "Logos Clientes",
+                    type: "object",
+                    list: true,
+                    fields: [
+                      {
+                        name: "image",
+                        label: "Imagem",
+                        type: "image",
+                      },
+                      {
+                        name: "alt",
+                        label: "Informação Imagem",
+                        type: "string",
+                      },
+                    ],
+                  },
                 ],
               },
             ],

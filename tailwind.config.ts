@@ -25,6 +25,19 @@ export default {
         "gray-800": "#27272A",
         "gray-900": "#18181B",
       },
+      keyframes: {
+        slide: {
+          "0%": {
+            transform: "translate(0, 0)",
+          },
+          "100%": {
+            transform: "translate(-100%, 0)",
+          },
+        },
+      },
+      animation: {
+        slide: "slide 50s linear infinite",
+      },
     },
   },
   plugins: [],

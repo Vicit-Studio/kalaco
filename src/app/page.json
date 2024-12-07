@@ -4,6 +4,37 @@
       "h1": "Marketing Digital focado em seus resultados !",
       "h4": "Cresça de forma inteligente com estratégias que combinam anúncios pagos e decisões guiadas por dados. Aumente sua presença, escale suas vendas e veja resultados reais.",
       "btn": "Comece a Crescer",
+      "bgImg": "/assets/bg-hero.png",
+      "logosClients": [
+        {
+          "image": "/assets/clients/logo-client-01.png",
+          "alt": "Logo Cliente"
+        },
+        {
+          "image": "/assets/clients/logo-client-02.png",
+          "alt": "Logo Cliente"
+        },
+        {
+          "image": "/assets/clients/logo-client-03.png",
+          "alt": "Logo Cliente"
+        },
+        {
+          "image": "/assets/clients/logo-client-04.png",
+          "alt": "Logo Cliente"
+        },
+        {
+          "image": "/assets/clients/logo-client-05.png",
+          "alt": "Logo Cliente"
+        },
+        {
+          "image": "/assets/clients/logo-client-06.png",
+          "alt": "Logo Cliente"
+        },
+        {
+          "image": "/assets/clients/logo-client-07.png",
+          "alt": "Logo Cliente"
+        }
+      ],
       "_template": "hero"
     }
   ],
