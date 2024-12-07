@@ -1,6 +1,6 @@
 import { tinaDataQuery } from "@/functions";
 
-import { SectionHero, SectionProblem } from "./_screens";
+import { SectionHero } from "./_screens";
 
 export default async function RootPage() {
   const { data, query, variables } = await tinaDataQuery("./page.json");
@@ -8,7 +8,6 @@ export default async function RootPage() {
   return (
     <>
       <SectionHero sData={data} sQuery={query} sVariables={variables} />
-      <SectionProblem sData={data} sQuery={query} sVariables={variables} />
     </>
   );
 }

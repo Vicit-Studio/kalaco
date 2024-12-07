@@ -1,11 +1,9 @@
-import { defineConfig, LocalAuthProvider } from "tinacms";
-import { TinaUserCollection } from "tinacms-authjs/dist/tinacms";
+import { defineConfig } from "tinacms";
 
 export default defineConfig({
   branch: "main",
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
   token: process.env.TINA_TOKEN,
-  authProvider: new LocalAuthProvider(),
   build: {
     publicFolder: "public",
     outputFolder: "admin",
@@ -18,7 +16,6 @@ export default defineConfig({
   },
   schema: {
     collections: [
-      TinaUserCollection,
       {
         name: "page",
         label: "Seções",
@@ -46,6 +43,11 @@ export default defineConfig({
                   {
                     name: "h4",
                     label: "SubHeadline",
+                    type: "string",
+                  },
+                  {
+                    name: "btn",
+                    label: "Botão",
                     type: "string",
                   },
                 ],

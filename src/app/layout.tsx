@@ -1,8 +1,10 @@
+import "../styles/globals.css";
+
 import type { Metadata } from "next";
 
 import { TypeProvider } from "@/types";
 
-import "../styles/globals.css";
+import { poppins } from "@/functions";
 
 export const metadata: Metadata = {
   title: {
@@ -52,7 +54,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: TypeProvider) {
   return (
-    <html lang="pt-br">
+    <html lang="pt-br" className={`${poppins.className}`}>
       <body>{children}</body>
     </html>
   );
