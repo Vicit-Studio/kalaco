@@ -1,6 +1,6 @@
 "use client";
 
-import { useTinaData } from "@/hooks";
+import { useScrollSection, useTinaData } from "@/hooks";
 
 import { TypeSectionDataQuery } from "@/types";
 
@@ -13,6 +13,7 @@ export const SectionHero = ({
   sVariables,
   sQuery,
 }: TypeSectionDataQuery) => {
+  const { scrollSection } = useScrollSection();
   const { data, tinaField } = useTinaData({
     dataT: sData,
     queryT: sQuery,
@@ -31,7 +32,7 @@ export const SectionHero = ({
 
   return (
     <>
-      {data.page.hero.map((infor: any, index: number) => (
+      {data.sections.hero.map((infor: any, index: number) => (
         <section
           key={index}
           className={base()}
@@ -41,20 +42,21 @@ export const SectionHero = ({
             <div className={content()}>
               <h1
                 className={headline()}
-                data-tina-field={tinaField(data.page.hero[0], "h1")}
+                data-tina-field={tinaField(data.sections.hero[0], "h1")}
               >
                 {infor?.h1}
               </h1>
               <h4
                 className={subheadline()}
-                data-tina-field={tinaField(data.page.hero[0], "h4")}
+                data-tina-field={tinaField(data.sections.hero[0], "h4")}
               >
                 {infor?.h4}
               </h4>
               <Button
                 withIcon
                 styles="brand"
-                data-tina-field={tinaField(data.page.hero[0], "btn")}
+                onClick={() => scrollSection(infor?.btnLink)}
+                data-tina-field={tinaField(data.sections.hero[0], "btn")}
               >
                 {infor?.btn}
               </Button>

@@ -1,0 +1,21 @@
+{
+  "logo": "/assets/brand/logo-brand.svg",
+  "header": [
+    {
+      "linkName": "Serviços",
+      "linkSection": "services"
+    },
+    {
+      "linkName": "Benefícios",
+      "linkSection": "benefits"
+    },
+    {
+      "linkName": "Como Funciona",
+      "linkSection": "method"
+    },
+    {
+      "linkName": "Quem Sou",
+      "linkSection": "about"
+    }
+  ]
+}

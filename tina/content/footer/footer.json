@@ -1,0 +1,14 @@
+{
+  "bgImg": "/assets/bg-footer.png",
+  "icon": "/assets/Handshake.svg",
+  "h2": "Pronto para fechar negócio?",
+  "p": "Preencha seus dados e escolha a solução ideal para começar a transformar seu negócio.",
+  "iconCopy": "/assets/Iconografia.svg",
+  "copyText": "© Kalaço Jr -  Todos os direitors reservados",
+  "network": [
+    {
+      "iconNet": "/assets/icons-netwok/InstagramLogo.svg",
+      "linkNet": "https://www.instagram.com/kalacojr/"
+    }
+  ]
+}

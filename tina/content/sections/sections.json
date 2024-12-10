@@ -4,6 +4,7 @@
       "h1": "Marketing Digital focado em seus resultados !",
       "h4": "Cresça de forma inteligente com estratégias que combinam anúncios pagos e decisões guiadas por dados. Aumente sua presença, escale suas vendas e veja resultados reais.",
       "btn": "Comece a Crescer",
+      "btnLink": "cta",
       "bgImg": "/assets/bg-hero.png",
       "logosClients": [
         {
@@ -40,9 +41,37 @@
   ],
   "problem": [
     {
+      "srcImg": "/assets/art-problem.png",
       "h2": "Chega de processos ineficientes e resultados inconsistentes. ",
       "p": "Transforme o marketing do seu negócio com soluções inteligentes que eliminam o retrabalho, potencializam suas vendas e automatizam sua comunicação. dados, performance e crescimento, tudo que você precisa para alcançar seus resultados.",
+      "list": [
+        {
+          "iconList": "/assets/PresentationChart.svg",
+          "itemList": "Engajamento elevado"
+        },
+        {
+          "iconList": "/assets/CrosshairSimple.svg",
+          "itemList": "Maior alcance de marca"
+        },
+        {
+          "iconList": "/assets/ChartLineDown.svg",
+          "itemList": "Menor rotatividade"
+        },
+        {
+          "iconList": "/assets/ChatsTeardrop.svg",
+          "itemList": "Mais usuários satisfeitos"
+        }
+      ],
       "_template": "problem"
+    }
+  ],
+  "services": [
+    {
+      "h2": "Serviços para escalar o seu negócio no digital.",
+      "p": "Adquira a solução que o seu negócio precisa.",
+      "btn": "Garanta Agora",
+      "btnLink": "",
+      "_template": "services"
     }
   ]
 }

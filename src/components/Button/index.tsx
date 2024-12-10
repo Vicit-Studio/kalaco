@@ -1,3 +1,5 @@
+"use client";
+
 import { ArrowDown } from "@phosphor-icons/react";
 
 import { TypeButton } from "./button.type";
