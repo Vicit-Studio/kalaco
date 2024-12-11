@@ -7,6 +7,18 @@ export const FooterCollection: Collection = {
   format: "json",
   fields: [
     {
+      name: "tel",
+      label: "Telefone com DDD",
+      type: "string",
+    },
+    {
+      name: "message",
+      label: "Mensagem Whatsapp",
+      isBody: true,
+      type: "rich-text",
+      toolbarOverride: ["heading", "bold", "italic", "link", "embed"],
+    },
+    {
       name: "bgImg",
       label: "Imagem de Fundo",
       type: "image",

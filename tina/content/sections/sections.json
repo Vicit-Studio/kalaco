@@ -70,7 +70,14 @@
       "h2": "Serviços para escalar o seu negócio no digital.",
       "p": "Adquira a solução que o seu negócio precisa.",
       "btn": "Garanta Agora",
-      "btnLink": "",
+      "btnLink": "cta",
+      "inforService": [
+        {
+          "imgService": "/",
+          "nameService": "Serviço",
+          "descriptionService": "Serviço"
+        }
+      ],
       "_template": "services"
     }
   ]

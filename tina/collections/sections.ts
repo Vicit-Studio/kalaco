@@ -143,6 +143,36 @@ export const SectionsCollection: Collection = {
               label: "Link Botão",
               type: "string",
             },
+            {
+              name: "inforService",
+              label: "Informações do Serviço",
+              type: "object",
+              list: true,
+              fields: [
+                {
+                  name: "imgService",
+                  label: "Imagem do Serviço",
+                  type: "image",
+                },
+                {
+                  name: "nameService",
+                  label: "Nome do Serviço",
+                  type: "string",
+                },
+                {
+                  name: "descriptionService",
+                  label: "Descrição do Serviço",
+                  type: "rich-text",
+                  toolbarOverride: [
+                    "heading",
+                    "bold",
+                    "italic",
+                    "link",
+                    "embed",
+                  ],
+                },
+              ],
+            },
           ],
         },
       ],

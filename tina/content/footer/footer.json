@@ -1,4 +1,6 @@
 {
+  "tel": "8597122176",
+  "message": "Olá, me chamo {name} e tenho interesse no serviço {service}. Poderia me passar mais informações? *Obrigado(a)*!\n",
   "bgImg": "/assets/bg-footer.png",
   "icon": "/assets/Handshake.svg",
   "h2": "Pronto para fechar negócio?",

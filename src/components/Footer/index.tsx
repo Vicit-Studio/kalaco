@@ -1,12 +1,24 @@
 "use client";
 
+import { Formik, Form } from "formik";
+import { toFormikValidationSchema } from "zod-formik-adapter";
+
+import confetti from "canvas-confetti";
+
 import { useTinaData } from "@/hooks";
 
 import { TypeSectionDataQuery } from "@/types";
 
+import { SchemaFooter } from "@/schemas";
+
+import { extractRichText } from "@/functions";
+
 import { Container } from "../Container";
+import { Input } from "../Input";
+import { Button } from "../Button";
 
 import { TvFooter } from "./styles";
+import { Select } from "../Select";
 
 export const Footer = ({ sData, sVariables, sQuery }: TypeSectionDataQuery) => {
   const { data, tinaField } = useTinaData({
@@ -30,6 +42,78 @@ export const Footer = ({ sData, sVariables, sQuery }: TypeSectionDataQuery) => {
   } = TvFooter();
 
   const footerData = data?.footer;
+
+  const arrayServices = [
+    {
+      textItem: "Trafégo Pago",
+      valueItem: "Trafégo Pago",
+    },
+    {
+      textItem: "Social Media",
+      valueItem: "Social Media",
+    },
+    {
+      textItem: "Automação",
+      valueItem: "Automação",
+    },
+    {
+      textItem: "Agentes de IA",
+      valueItem: "Agentes de IA",
+    },
+    {
+      textItem: "Páginas Web",
+      valueItem: "Páginas Web",
+    },
+    {
+      textItem: "CRM",
+      valueItem: "CRM",
+    },
+    {
+      textItem: "E-Commerce",
+      valueItem: "E-Commerce",
+    },
+  ];
+
+  function frameConfetti() {
+    const colors = ["#005BBC", "#217BCF"];
+
+    confetti({
+      particleCount: 60,
+      angle: 60,
+      spread: 55,
+      origin: { x: 0 },
+      colors: colors,
+    });
+    confetti({
+      particleCount: 60,
+      angle: 120,
+      spread: 55,
+      origin: { x: 1 },
+      colors: colors,
+    });
+  }
+
+  const handleForm = async (
+    name: string,
+    service: string,
+    { resetForm, setSubmitting }: any
+  ) => {
+    try {
+      const messageTemplate = footerData?.message;
+      let message = extractRichText(messageTemplate);
+      const personalizedMessage = message
+        .replace("{name}", name)
+        .replace("{service}", service);
+      const encodedMessage = encodeURIComponent(personalizedMessage);
+      const whatsappLink = `https://api.whatsapp.com/send/?phone=55${footerData?.tel}&text=${encodedMessage}`;
+      frameConfetti();
+      setTimeout(() => window.open(whatsappLink, "_blank"), 1000);
+      setSubmitting(false);
+      resetForm();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <footer
@@ -55,6 +139,78 @@ export const Footer = ({ sData, sVariables, sQuery }: TypeSectionDataQuery) => {
           <p className={p()} data-tina-field={tinaField(footerData, "p")}>
             {footerData?.p}
           </p>
+          <Formik
+            initialValues={{
+              name: "",
+              service: "",
+            }}
+            validationSchema={toFormikValidationSchema(SchemaFooter)}
+            onSubmit={async (values, { resetForm, setSubmitting }) => {
+              await handleForm(values.name, values.service, {
+                resetForm,
+                setSubmitting,
+              });
+            }}
+          >
+            {({
+              values,
+              errors,
+              touched,
+              handleChange,
+              handleBlur,
+              handleSubmit,
+              handleReset,
+              isSubmitting,
+            }) => (
+              <Form
+                onSubmit={handleSubmit}
+                onReset={handleReset}
+                className={form()}
+              >
+                <div className="flex flex-col gap-[0.8rem] h-[8.4rem]">
+                  <Input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={values.name}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    error={!!errors.name}
+                    placeholder="Digite seu nome"
+                  />
+                  {errors.name && touched.name && (
+                    <span className="text-red-500 max-w-[30rem] whitespace-nowrap">
+                      {errors.name}
+                    </span>
+                  )}
+                </div>
+                <div className="flex flex-col gap-[0.8rem] h-[8.4rem]">
+                  <Select
+                    full
+                    id="service"
+                    name="service"
+                    value={values.service}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    error={!!errors.service}
+                    placeholder="Qual serviço precisa?"
+                    arrayItems={arrayServices}
+                  />
+                  {errors.service && touched.service && (
+                    <span className="text-red-500">{errors.service}</span>
+                  )}
+                </div>
+                <Button
+                  type="submit"
+                  styles="brand"
+                  withIcon={false}
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Enviando" : "Enviar"}
+                </Button>
+              </Form>
+            )}
+          </Formik>
         </div>
         <div className={creator()}>
           <div className={copy()}>
