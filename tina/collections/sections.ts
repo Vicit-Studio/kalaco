@@ -295,5 +295,45 @@ export const SectionsCollection: Collection = {
         },
       ],
     },
+    {
+      name: "professional",
+      label: "Seção Profissional",
+      type: "object",
+      list: true,
+      templates: [
+        {
+          name: "professional",
+          label: "Professional",
+          fields: [
+            {
+              name: "photo",
+              label: "Foto",
+              type: "image",
+            },
+            {
+              name: "h1",
+              label: "Nome",
+              type: "string",
+            },
+            {
+              name: "h3",
+              label: "Texto Inicial",
+              type: "string",
+            },
+            {
+              name: "h4",
+              label: "Função",
+              type: "string",
+            },
+            {
+              name: "description",
+              label: "Descrição",
+              type: "rich-text",
+              toolbarOverride: ["heading", "bold", "italic", "link", "embed"],
+            },
+          ],
+        },
+      ],
+    },
   ],
 };

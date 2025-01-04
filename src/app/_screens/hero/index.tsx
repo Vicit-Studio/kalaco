@@ -35,6 +35,8 @@ export const SectionHero = ({
       {data.sections.hero.map((infor: any, index: number) => (
         <section
           key={index}
+          id="hero"
+          data-link-section="hero"
           className={base()}
           style={{
             background: `url(${infor?.bgImg}) no-repeat center center/cover`,

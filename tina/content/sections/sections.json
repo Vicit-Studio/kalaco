@@ -114,8 +114,8 @@
       "listMethod": [
         {
           "iconMethod": "/assets/Iconografia.svg",
-          "nameMethod": "Metódos Ágeis",
-          "descriptionMethod": "Aplicação de uma metodologia exclusiva para um desenvolvimento digital eficaz e sustentável.\n"
+          "nameMethod": "Planejamento Estratégico",
+          "descriptionMethod": "Reunião inicial para entender seu negócio, definir metas e construir uma estratégia personalizada.\n"
         },
         {
           "iconMethod": "/assets/Iconografia.svg",
@@ -124,11 +124,21 @@
         },
         {
           "iconMethod": "/assets/Iconografia.svg",
-          "nameMethod": "Planejamento Estratégico",
-          "descriptionMethod": "Reunião inicial para entender seu negócio, definir metas e construir uma estratégia personalizada.\n"
+          "nameMethod": "Metódos Ágeis",
+          "descriptionMethod": "Aplicação de uma metodologia exclusiva para um desenvolvimento digital eficaz e sustentável.\n"
         }
       ],
       "_template": "method"
+    }
+  ],
+  "professional": [
+    {
+      "photo": "/assets/Iconografia.svg",
+      "h1": "Kalaço Júnior",
+      "h3": "Olá, praze",
+      "h4": "Gestor de Trafégo",
+      "description": "Especialista em marketing digital com foco em vendas e resultados, atuo na criação de soluções personalizadas que destacam marcas em um mercado competitivo. Com uma abordagem prática e orientada a dados, transformo a visão dos clientes em estratégias digitais que realmente entregam resultados. Minha experiência em projetos variados, do desenvolvimento à execução, garante uma adaptação eficaz às necessidades de cada negócio, sempre visando o crescimento e a lucratividade.\n",
+      "_template": "professional"
     }
   ]
 }

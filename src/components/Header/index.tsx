@@ -75,6 +75,7 @@ export const Header = ({ sData, sVariables, sQuery }: TypeSectionDataQuery) => {
             width={100}
             height={100}
             className={logoNav({ scroll: scrollHeader })}
+            onClick={() => handleLinkClick("hero")}
           />
           <ul className={menu({ scroll: scrollHeader })}>
             {data.header.header

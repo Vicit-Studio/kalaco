@@ -21,7 +21,8 @@ export const SectionProfessional = ({
     variablesT: sVariables,
   });
 
-  const { base, container } = TvSectionProfessional();
+  const { base, container, photo, inforPf, h1, h3, h4, p } =
+    TvSectionProfessional();
 
   return (
     <>
@@ -33,7 +34,45 @@ export const SectionProfessional = ({
           className={base()}
         >
           <Container className={container()}>
-            <h1></h1>
+            <img
+              src={infor?.photo}
+              alt="Foto do Profissional"
+              loading="lazy"
+              className={photo()}
+              data-tina-field={tinaField(
+                data.sections.professional[0],
+                "photo"
+              )}
+            />
+            <div className={inforPf()}>
+              <h3
+                className={h3()}
+                data-tina-field={tinaField(data.sections.professional[0], "h3")}
+              >
+                {infor?.h3}
+              </h3>
+              <h1
+                className={h1()}
+                data-tina-field={tinaField(data.sections.professional[0], "h1")}
+              >
+                {infor?.h1}
+              </h1>
+              <h4
+                className={h4()}
+                data-tina-field={tinaField(data.sections.professional[0], "h4")}
+              >
+                {infor?.h4}
+              </h4>
+              <span
+                className={p()}
+                data-tina-field={tinaField(
+                  data.sections.professional[0],
+                  "description"
+                )}
+              >
+                <TinaMarkdown content={infor?.description} />
+              </span>
+            </div>
           </Container>
         </section>
       ))}

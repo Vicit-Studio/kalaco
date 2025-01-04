@@ -8,6 +8,7 @@ import {
   SectionMethod,
   SectionProblem,
   SectionServices,
+  SectionProfessional,
 } from "./_screens";
 
 export default async function RootPage() {
@@ -30,6 +31,7 @@ export default async function RootPage() {
       <SectionServices sData={data} sQuery={query} sVariables={variables} />
       <SectionBenefits sData={data} sQuery={query} sVariables={variables} />
       <SectionMethod sData={data} sQuery={query} sVariables={variables} />
+      <SectionProfessional sData={data} sQuery={query} sVariables={variables} />
       <Footer
         sData={footer.data}
         sQuery={footer.query}
