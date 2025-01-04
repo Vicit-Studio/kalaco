@@ -4,7 +4,7 @@ export const TvSectionBenefits = tv({
   slots: {
     base: "py-[9.6rem] relative",
     container: "flex flex-wrap justify-between gap-[3.2rem]",
-    title: "w-full max-w-[70rem] sticky top-0",
+    title: "w-full h-fit max-w-[70rem] lg:sticky top-0",
     h2: "text-brand-300 mb-[1.6rem]",
     p: "text-gray-800 mb-[3.2rem]",
     listBenefits:

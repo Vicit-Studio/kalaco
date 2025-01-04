@@ -5,6 +5,7 @@ import { Header, Footer } from "@/components";
 import {
   SectionBenefits,
   SectionHero,
+  SectionMethod,
   SectionProblem,
   SectionServices,
 } from "./_screens";
@@ -28,6 +29,7 @@ export default async function RootPage() {
       <SectionProblem sData={data} sQuery={query} sVariables={variables} />
       <SectionServices sData={data} sQuery={query} sVariables={variables} />
       <SectionBenefits sData={data} sQuery={query} sVariables={variables} />
+      <SectionMethod sData={data} sQuery={query} sVariables={variables} />
       <Footer
         sData={footer.data}
         sQuery={footer.query}

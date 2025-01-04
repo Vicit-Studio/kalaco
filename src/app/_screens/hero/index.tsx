@@ -36,7 +36,9 @@ export const SectionHero = ({
         <section
           key={index}
           className={base()}
-          style={{ backgroundImage: `url(${infor?.bgImg})` }}
+          style={{
+            background: `url(${infor?.bgImg}) no-repeat center center/cover`,
+          }}
         >
           <Container className={container()}>
             <div className={content()}>

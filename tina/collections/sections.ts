@@ -241,5 +241,59 @@ export const SectionsCollection: Collection = {
         },
       ],
     },
+    {
+      name: "method",
+      label: "Seção Metodos",
+      type: "object",
+      list: true,
+      templates: [
+        {
+          name: "method",
+          label: "Method",
+          fields: [
+            {
+              name: "h2",
+              label: "Título da Seção",
+              type: "string",
+            },
+            {
+              name: "p",
+              label: "Descrição",
+              type: "string",
+            },
+            {
+              name: "listMethod",
+              label: "Informações dos Metodos",
+              type: "object",
+              list: true,
+              fields: [
+                {
+                  name: "iconMethod",
+                  label: "Icone Metodo",
+                  type: "image",
+                },
+                {
+                  name: "nameMethod",
+                  label: "Nome do Metodo",
+                  type: "string",
+                },
+                {
+                  name: "descriptionMethod",
+                  label: "Descrição do Metodo",
+                  type: "rich-text",
+                  toolbarOverride: [
+                    "heading",
+                    "bold",
+                    "italic",
+                    "link",
+                    "embed",
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 };

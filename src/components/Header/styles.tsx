@@ -15,10 +15,9 @@ export const TvHeader = tv({
   variants: {
     scroll: {
       true: {
-        base: "bottom-[6.4rem] top-auto transition-all",
+        base: "bottom-[8rem] top-auto transition-all",
         nav: "p-[1.6rem] bg-gray-50 rounded-[0.8rem] border border-gray-600 backdrop-blur transition-all",
         menu: "gap-[0.8rem]",
-        menuMobile: "",
         logoMenu: "hidden",
         logoNav: "block",
       },

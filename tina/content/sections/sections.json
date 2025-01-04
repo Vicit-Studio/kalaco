@@ -106,5 +106,29 @@
       ],
       "_template": "benefits"
     }
+  ],
+  "method": [
+    {
+      "h2": "Como alcançamos resultados com nossa Metodologia.",
+      "p": "Uma abordagem completa que une estratégia, execução constante e uma metodologia única para entregar resultados digitais duradouros.",
+      "listMethod": [
+        {
+          "iconMethod": "/assets/Iconografia.svg",
+          "nameMethod": "Metódos Ágeis",
+          "descriptionMethod": "Aplicação de uma metodologia exclusiva para um desenvolvimento digital eficaz e sustentável.\n"
+        },
+        {
+          "iconMethod": "/assets/Iconografia.svg",
+          "nameMethod": "Aplicação e Otimização",
+          "descriptionMethod": "Reuniões mensais para análise de resultados e melhorias contínuas, com relatórios detalhados.\n"
+        },
+        {
+          "iconMethod": "/assets/Iconografia.svg",
+          "nameMethod": "Planejamento Estratégico",
+          "descriptionMethod": "Reunião inicial para entender seu negócio, definir metas e construir uma estratégia personalizada.\n"
+        }
+      ],
+      "_template": "method"
+    }
   ]
 }

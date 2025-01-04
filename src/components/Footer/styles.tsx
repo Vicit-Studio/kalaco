@@ -2,9 +2,9 @@ import { tv } from "tailwind-variants";
 
 export const TvFooter = tv({
   slots: {
-    base: "pt-[6.4rem] z-50",
+    base: "pt-[6.4rem] z-20 relative",
     container: "flex flex-col items-center gap-[9.6rem]",
-    content: "flex flex-col items-center justify-center w-full",
+    content: "flex flex-col items-center justify-center w-full py-[9.6rem]",
     icon: "w-[9.6rem] h-[9.6rem] p-[2.4rem] bg-brand-300 rounded-full mb-[2.4rem]",
     h2: "text-brand-100 text-center w-full max-w-[61.6rem] mb-[1.6rem]",
     p: "text-gray-600 text-center w-full max-w-[61.6rem] mb-[2.4rem]",
