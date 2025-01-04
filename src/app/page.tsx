@@ -2,7 +2,12 @@ import { tinaDataQuery } from "@/functions";
 
 import { Header, Footer } from "@/components";
 
-import { SectionHero, SectionProblem, SectionServices } from "./_screens";
+import {
+  SectionBenefits,
+  SectionHero,
+  SectionProblem,
+  SectionServices,
+} from "./_screens";
 
 export default async function RootPage() {
   const header = await tinaDataQuery("header", "header.json");
@@ -22,6 +27,7 @@ export default async function RootPage() {
       <SectionHero sData={data} sQuery={query} sVariables={variables} />
       <SectionProblem sData={data} sQuery={query} sVariables={variables} />
       <SectionServices sData={data} sQuery={query} sVariables={variables} />
+      <SectionBenefits sData={data} sQuery={query} sVariables={variables} />
       <Footer
         sData={footer.data}
         sQuery={footer.query}

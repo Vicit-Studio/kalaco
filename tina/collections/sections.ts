@@ -177,5 +177,69 @@ export const SectionsCollection: Collection = {
         },
       ],
     },
+    {
+      name: "benefits",
+      label: "Seção Benefícios",
+      type: "object",
+      list: true,
+      templates: [
+        {
+          name: "benefits",
+          label: "Benefits",
+          fields: [
+            {
+              name: "h2",
+              label: "Título da Seção",
+              type: "string",
+            },
+            {
+              name: "p",
+              label: "Descrição",
+              type: "string",
+            },
+            {
+              name: "btn",
+              label: "Botão",
+              type: "string",
+            },
+            {
+              name: "btnLink",
+              label: "Link Botão",
+              type: "string",
+            },
+            {
+              name: "listBenefits",
+              label: "Informações dos Benefícios",
+              type: "object",
+              list: true,
+              fields: [
+                {
+                  name: "iconBenefits",
+                  label: "Icone Benefício",
+                  type: "image",
+                },
+                {
+                  name: "nameBenefits",
+                  label: "Nome do Benefício",
+                  type: "string",
+                },
+                {
+                  name: "descriptionBenefits",
+                  label: "Descrição do Benefício",
+                  type: "rich-text",
+                  toolbarOverride: [
+                    "heading",
+                    "bold",
+                    "italic",
+                    "link",
+                    "embed",
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 };

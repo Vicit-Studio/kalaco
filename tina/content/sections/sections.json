@@ -75,10 +75,36 @@
         {
           "imgService": "/",
           "nameService": "Serviço",
-          "descriptionService": "Serviço"
+          "descriptionService": "Serviço\n"
         }
       ],
       "_template": "services"
+    }
+  ],
+  "benefits": [
+    {
+      "h2": "Por que meus serviços são ideais para o seu crescimento digital?",
+      "p": "Oferecemos uma parceria focada em resultados, com suporte contínuo e um excelente custo-benefício para você.",
+      "btn": "Entrar em contato",
+      "btnLink": "cta",
+      "listBenefits": [
+        {
+          "iconBenefits": "/assets/TrendUp.svg",
+          "nameBenefits": "Entrega e Excelência",
+          "descriptionBenefits": "Metodologia precisa e execução eficiente que garantem resultados sólidos.\n"
+        },
+        {
+          "iconBenefits": "/assets/ChatTeardropText.svg",
+          "nameBenefits": "Suporte eficaz",
+          "descriptionBenefits": "Nossa parceria vai além da entrega, suporte eficiente.\n"
+        },
+        {
+          "iconBenefits": "/assets/Coins.svg",
+          "nameBenefits": "Custo-Benefício",
+          "descriptionBenefits": "Qualidade de ponta com preços justo.\n"
+        }
+      ],
+      "_template": "benefits"
     }
   ]
 }
