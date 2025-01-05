@@ -73,7 +73,7 @@
       "btnLink": "cta",
       "inforService": [
         {
-          "imgService": "/",
+          "imgService": "/assets/",
           "nameService": "Serviço",
           "descriptionService": "Serviço\n"
         }
@@ -133,7 +133,7 @@
   ],
   "professional": [
     {
-      "photo": "/assets/Iconografia.svg",
+      "photo": "/assets/photo.png",
       "h1": "Kalaço Júnior",
       "h3": "Olá, praze",
       "h4": "Gestor de Trafégo",
