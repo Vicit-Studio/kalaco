@@ -2,7 +2,7 @@ import { tv } from "tailwind-variants";
 
 export const TvButton = tv({
   slots: {
-    base: "flex flex-wrap w-fit disabled:opacity-80",
+    base: "flex flex-wrap w-fit h-fit disabled:opacity-80",
     span: "h-[4.8rem] px-[1.6rem] py-[0.8rem] rounded-[1.4rem] uppercase flex items-center",
     icon: "w-[4.8rem] h-[4.8rem] p-[0.8rem] rounded-[1.4rem] flex items-center justify-center",
   },

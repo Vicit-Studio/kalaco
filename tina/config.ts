@@ -4,6 +4,7 @@ import {
   HeaderCollection,
   FooterCollection,
   SectionsCollection,
+  ServicesCollection,
 } from "./collections";
 
 export default defineConfig({
@@ -21,6 +22,11 @@ export default defineConfig({
     },
   },
   schema: {
-    collections: [HeaderCollection, SectionsCollection, FooterCollection],
+    collections: [
+      HeaderCollection,
+      SectionsCollection,
+      FooterCollection,
+      ServicesCollection,
+    ],
   },
 });

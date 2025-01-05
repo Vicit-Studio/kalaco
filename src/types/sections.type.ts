@@ -6,4 +6,5 @@ export interface TypeSectionDataQuery<T = any> {
   sData: T;
   sQuery: string;
   sVariables: T;
+  tableData?: T;
 }

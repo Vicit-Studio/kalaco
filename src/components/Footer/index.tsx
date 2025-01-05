@@ -20,7 +20,12 @@ import { Button } from "../Button";
 import { TvFooter } from "./styles";
 import { Select } from "../Select";
 
-export const Footer = ({ sData, sVariables, sQuery }: TypeSectionDataQuery) => {
+export const Footer = ({
+  sData,
+  sVariables,
+  sQuery,
+  tableData,
+}: TypeSectionDataQuery) => {
   const { data, tinaField } = useTinaData({
     dataT: sData,
     queryT: sQuery,
@@ -42,37 +47,7 @@ export const Footer = ({ sData, sVariables, sQuery }: TypeSectionDataQuery) => {
   } = TvFooter();
 
   const footerData = data?.footer;
-
-  const arrayServices = [
-    {
-      textItem: "Trafégo Pago",
-      valueItem: "Trafégo Pago",
-    },
-    {
-      textItem: "Social Media",
-      valueItem: "Social Media",
-    },
-    {
-      textItem: "Automação",
-      valueItem: "Automação",
-    },
-    {
-      textItem: "Agentes de IA",
-      valueItem: "Agentes de IA",
-    },
-    {
-      textItem: "Páginas Web",
-      valueItem: "Páginas Web",
-    },
-    {
-      textItem: "CRM",
-      valueItem: "CRM",
-    },
-    {
-      textItem: "E-Commerce",
-      valueItem: "E-Commerce",
-    },
-  ];
+  const arrayServices = tableData.data.services.services;
 
   function frameConfetti() {
     const colors = ["#005BBC", "#217BCF"];
@@ -205,8 +180,9 @@ export const Footer = ({ sData, sVariables, sQuery }: TypeSectionDataQuery) => {
                   styles="brand"
                   withIcon={false}
                   disabled={isSubmitting}
+                  data-tina-field={tinaField(footerData, "btn")}
                 >
-                  {isSubmitting ? "Enviando" : "Enviar"}
+                  {isSubmitting ? footerData?.btnSend : footerData?.btn}
                 </Button>
               </Form>
             )}

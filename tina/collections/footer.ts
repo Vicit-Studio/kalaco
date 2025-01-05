@@ -24,6 +24,16 @@ export const FooterCollection: Collection = {
       type: "image",
     },
     {
+      name: "btn",
+      label: "Texto Botão Sem Enviar",
+      type: "string",
+    },
+    {
+      name: "btnSend",
+      label: "Texto Botão Enviando",
+      type: "string",
+    },
+    {
       name: "icon",
       label: "Icone",
       type: "image",

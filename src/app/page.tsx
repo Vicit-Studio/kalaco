@@ -14,6 +14,7 @@ import {
 export default async function RootPage() {
   const header = await tinaDataQuery("header", "header.json");
   const footer = await tinaDataQuery("footer", "footer.json");
+  const table = await tinaDataQuery("services", "services.json");
   const { data, query, variables } = await tinaDataQuery(
     "sections",
     "sections.json"
@@ -36,6 +37,7 @@ export default async function RootPage() {
         sData={footer.data}
         sQuery={footer.query}
         sVariables={footer.variables}
+        tableData={table}
       />
     </>
   );

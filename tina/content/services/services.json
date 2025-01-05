@@ -1,0 +1,32 @@
+{
+  "services": [
+    {
+      "textItem": "Agentes de IA",
+      "valueItem": "Agentes de IA"
+    },
+    {
+      "textItem": "Trafégo Pago",
+      "valueItem": "Trafégo Pago"
+    },
+    {
+      "textItem": "Social Media",
+      "valueItem": "Social Media"
+    },
+    {
+      "textItem": "Automação",
+      "valueItem": "Automação"
+    },
+    {
+      "textItem": "E-Commerce",
+      "valueItem": "E-Commerce"
+    },
+    {
+      "textItem": "CRM",
+      "valueItem": "CRM"
+    },
+    {
+      "textItem": "Páginas Web",
+      "valueItem": "Páginas Web"
+    }
+  ]
+}
